@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Fixture: ældste sikre artikel",
+    "url": "https://www.ign.com/articles/fixture-oldest",
+    "publishedAt": "2026-09-01",
+    "spoiler": "safe"
+  },
+  {
+    "title": "Fixture: nyeste sikre artikel",
+    "url": "https://www.ign.com/articles/fixture-newest",
+    "publishedAt": "2026-10-07",
+    "spoiler": "safe"
+  },
+  {
+    "title": "Fixture: mild artikel",
+    "url": "https://www.ign.com/articles/fixture-mild",
+    "publishedAt": "2026-10-01",
+    "spoiler": "mild"
+  },
+  {
+    "title": "Fixture: historie-artikel",
+    "url": "https://www.ign.com/articles/fixture-story",
+    "publishedAt": "2026-10-02",
+    "spoiler": "story"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "efter-midnat",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Nedtælling til GTA VI i Danmark. Uofficielt fanprojekt.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "node scripts/build.mjs && node scripts/check-size.mjs",
+    "thumbs": "node scripts/fetch-thumbs.mjs",
+    "og": "node scripts/make-og.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0",
+    "esbuild": "^0.25.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

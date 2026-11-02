@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{siteUrl}}">
+  <meta name="theme-color" content="#120A1F">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:site_name" content="{{siteName}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{siteUrl}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ogImageAlt}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{ogImage}}">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{{jsonLd}}</script>
+  <script type="application/json" id="app-config">{{appConfig}}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#indhold">Spring til indhold</a>
+
+  <header class="site-header">
+    <span class="brand">{{siteName}}</span>
+    <span class="site-header__tag">Nedtælling · dansk tid</span>
+  </header>
+
+  <main id="indhold">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="hero__title" data-launched-text="GTA VI er landet">GTA VI lander om</h1>
+
+      <div class="stage">
+        <div class="sun" aria-hidden="true"></div>
+
+        <div id="countdown" class="countdown" role="timer" aria-describedby="launch-line">
+          <div class="tile" data-unit="days"><span class="tile__value">–</span><span class="tile__label">dage</span></div>
+          <div class="tile" data-unit="hours"><span class="tile__value">–</span><span class="tile__label">timer</span></div>
+          <div class="tile" data-unit="minutes"><span class="tile__value">–</span><span class="tile__label">minutter</span></div>
+          <div class="tile" data-unit="seconds"><span class="tile__value">–</span><span class="tile__label">sekunder</span></div>
+        </div>
+
+        <div id="launched" class="launched" hidden>
+          <h2>Ude nu</h2>
+          <p>GTA VI er ude i Danmark. God tur til Leonida.</p>
+        </div>
+      </div>
+
+      <p id="launch-line" class="launch-line">
+        Lanceres <time id="launch-time" datetime="{{launchIso}}">{{launchText}}</time><br>
+        på {{platforms}}
+      </p>
+
+      <div class="actions">
+        <a class="btn btn--primary" href="gta6-lancering.ics" download="gta6-lancering.ics">Tilføj til kalender</a>
+        <button id="sound-toggle" class="btn btn--ghost" type="button" aria-pressed="false">Lyd: <span class="toggle__state">fra</span></button>
+      </div>
+
+      <div id="soundtrack" class="soundtrack" hidden>
+        <div class="soundtrack__player"></div>
+        <p class="soundtrack__caption">
+          <span class="soundtrack__now">Spiller nu</span>
+          <strong>{{soundtrackTitle}}</strong> · {{soundtrackArtists}}<br>
+          <span class="muted">fra {{soundtrackAlbum}}, via {{soundtrackChannel}} på YouTube</span>
+        </p>
+      </div>
+
+      <p id="sr-status" class="sr-only" aria-live="polite"></p>
+      <div class="confetti" aria-hidden="true"></div>
+    </section>
+
+    <section class="section longwait" aria-labelledby="longwait-title">
+      <div class="longwait__box">
+        <h2 id="longwait-title" class="eyebrow">Den lange ventetid</h2>
+        <p class="longwait__value">
+          <span id="longwait-days" class="longwait__days">–</span>
+          <span class="longwait__unit">dage og</span>
+          <span id="longwait-clock" class="longwait__clock">–</span>
+        </p>
+        <p class="muted">siden GTA V udkom {{gtaVText}}.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="videos-title">
+      <div class="section__head">
+        <h2 id="videos-title" class="section__title">Trailere og videoer</h2>
+        <button id="spoiler-toggle" class="btn btn--ghost btn--shield" type="button" aria-pressed="true">
+          <svg class="icon-shield" aria-hidden="true" viewBox="0 0 24 24" width="22" height="22">
+            <path class="icon-shield__body" d="M12 2.5 4 5.5v6.1c0 4.9 3.4 8.6 8 9.9 4.6-1.3 8-5 8-9.9V5.5l-8-3Z"/>
+            <path class="icon-shield__check" d="m8.5 12 2.4 2.4 4.6-4.8"/>
+            <path class="icon-shield__slash" d="M5 4.5 19 19.5"/>
+          </svg>
+          <span>Spoilerskjold: <span class="toggle__state">til</span></span>
+        </button>
+      </div>
+      <p class="muted section__intro">Videoer indlæses først fra YouTube, når du trykker afspil. Spoilerskjoldet skjuler alt, der ikke er helt spoilerfrit.</p>
+      <ul class="videos">
+{{videos}}
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="ign-title">
+      <h2 id="ign-title" class="section__title">Fra IGN</h2>
+      <ul class="articles">
+{{articles}}
+      </ul>
+      <p class="section__more"><a href="{{ignGamePage}}">Alle GTA VI-artikler på IGN</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Uofficielt fanprojekt.</strong> Ikke tilknyttet Rockstar Games, Take-Two Interactive eller IGN. Alle varemærker tilhører deres ejere.</p>
+    <p>Ingen cookies og ingen sporing. Officielle nyheder: <a href="{{officialLink}}">rockstargames.com</a>.</p>
+  </footer>
+</body>
+</html>

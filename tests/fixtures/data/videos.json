@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Fixture: sikker trailer",
+    "channel": "Rockstar Games",
+    "youtubeId": "QdBZY2fkU-0",
+    "phase": "pre",
+    "spoiler": "safe"
+  },
+  {
+    "title": "Fixture: mild spoiler",
+    "channel": "TGG",
+    "youtubeId": "UskLh1DPE-U",
+    "phase": "pre",
+    "spoiler": "mild"
+  },
+  {
+    "title": "Fixture: historie-spoiler",
+    "channel": "Rockstar Games",
+    "youtubeId": "VQRLujxTm3c",
+    "phase": "pre",
+    "spoiler": "story"
+  }
+]

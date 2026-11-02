@@ -1,0 +1,26 @@
+{
+  "siteName": "Efter Midnat",
+  "siteUrl": "https://example.github.io/efter-midnat/",
+  "timeZone": "Europe/Copenhagen",
+  "launchLocal": "2026-11-19T00:00",
+  "preloadLocal": "2026-11-12T00:00",
+  "reviewEmbargoLocal": "2026-11-18T00:00",
+  "gtaVReleaseLocal": "2013-09-17T00:00",
+  "platforms": "PS5 og Xbox Series X|S",
+  "soundtrack": {
+    "title": "Sexy Magic",
+    "artists": "CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.. & Étienne de Crécy",
+    "album": "GTA VI: The Album",
+    "youtubeId": "G59iOfClrVo",
+    "channel": "Atlantic Records"
+  },
+  "delayHistory": [
+    { "label": "Efterår 2025", "announced": "2023-12-05" },
+    { "label": "26. maj 2026", "announced": "2025-05-02" },
+    { "label": "19. november 2026", "announced": "2025-11-06" }
+  ],
+  "links": {
+    "official": "https://www.rockstargames.com/VI",
+    "ignGamePage": "https://www.ign.com/games/grand-theft-auto-vi"
+  }
+}
